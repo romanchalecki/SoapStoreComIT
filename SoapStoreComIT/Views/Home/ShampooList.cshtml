@@ -1,0 +1,71 @@
+﻿@model SoapStoreComIT.Views.ViewModels.ShampooList
+
+<br />
+<div class="container row p-0 m-0">
+    <div class="cool-9">
+        <h2 class="text-info">Shampoo List</h2>
+    </div>
+    <div class="cool-3">
+        <a asp-controller="Home" asp-action="CreateNewShampoo" class="btn btn-info from-control text-white">Create New Shampoo</a>
+    </div>
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (@Model.Shampoos.Count() > 0)
+            {
+                <table class="table-striped border">
+                    <tr class="table-secondary">
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Name"></label>
+                        </td>
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Contents"></label>
+                        </td>
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Price"></label>
+                        </td>
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Description"></label>
+                        </td>
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Ingridients"></label>
+                        </td>
+                        <td>
+                            <label asp-for="Shampoos.FirstOrDefault().Quantity"></label>
+                        </td>
+                    </tr>
+                    @foreach (var item in Model.Shampoos)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(m => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Contents)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Price)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Description)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Ingridients)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(m => item.Quantity)
+                            </td>
+                            <td>
+                                <a asp-action="EditShampoo" asp-route-id="@item.Id" class=" btn btn-success btn-sm text-white">Edit</a>
+                                <a asp-action="DeleteShampoo" asp-route-Id="@item.Id" class="btn btn-danger btn-sm text-white">Delite</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>There are no soaps available.</p>
+            }
+        </form>
+    </div>
