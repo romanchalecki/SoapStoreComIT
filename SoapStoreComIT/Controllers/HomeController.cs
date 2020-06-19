@@ -51,6 +51,7 @@ namespace SoapStoreComIT.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult AddNewSoap(Soap _soap) //submit new Soap
         {
             if (ModelState.IsValid)
@@ -61,13 +62,21 @@ namespace SoapStoreComIT.Controllers
             }
             else
             {
-                return View("Create");
+                return View("CreateNewSoap");
             }
         }
 
-        public async Task<IActionResult> EditSoap(int Id) //return viev Edit Soap
+        public async Task<IActionResult> EditSoap(int? Id) //return viev Edit Soap
         {
+            if(Id==null)
+            {
+                return NotFound();
+            }
             var _soap = await _db.Soap.FindAsync(Id);
+            if(_soap==null)
+            {
+                return NotFound();
+            }
             return View(_soap);
         }
 
@@ -88,7 +97,7 @@ namespace SoapStoreComIT.Controllers
             }
             else
             {
-                return View("Edit");
+                return View("EditSoap");
             }
         }
 
@@ -128,6 +137,7 @@ namespace SoapStoreComIT.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult AddNewShampoo(Shampoo _shampoo) //submit new Shampoo
         {
             if (ModelState.IsValid)
@@ -138,13 +148,21 @@ namespace SoapStoreComIT.Controllers
             }
             else
             {
-                return View("Create");
+                return View("CreateNewShampoo");
             }
         }
 
-        public async Task<IActionResult> EditShampoo(int Id) //return viev Edit Shampoo
+        public async Task<IActionResult> EditShampoo(int? Id) //return viev Edit Shampoo
         {
+            if (Id == null)
+            {
+                return NotFound();
+            }
             var _shampoo = await _db.Shampoo.FindAsync(Id);
+            if(_shampoo==null)
+            {
+                return NotFound(); 
+            }
             return View(_shampoo);
         }
 
@@ -165,7 +183,7 @@ namespace SoapStoreComIT.Controllers
             }
             else
             {
-                return View("Edit");
+                return View("EditShampoo");
             }
         }
 
