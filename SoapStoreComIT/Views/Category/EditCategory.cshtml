@@ -1,0 +1,30 @@
+﻿@model SoapStoreComIT.Models.Category
+
+<br />
+<h2 class="text-info">Edit Category</h2>
+<br />
+<div class="border container" style="padding:30px;">
+    <form method="post">
+        <input type="hidden" asp-for="@Model.Id" />
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+        <div class="form-group row">
+            <div class="col-4">
+                <label asp-for="@Model.Name"></label>
+            </div>
+            <div class="col-6">
+                <input asp-for="@Model.Name" class="form-control" />
+            </div>
+            <span asp-validation-for="@Model.Name" class="small text-danger"></span>
+            
+        </div>
+        <div class="form-group row">
+            <div class="col-3 offset-4">
+                <input type="submit" asp-action="SubmitEditCategory" value="Update" class="btn btn-primary form-control" />
+            </div>
+            <div class="col-3">
+                <a asp-action="CategoryList" class="btn btn-success form-control">Back to List</a>
+            </div>
+
+        </div>
+    </form>
+</div>

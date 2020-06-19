@@ -26,5 +26,7 @@
     <Folder Include="Views\Category\" />
     <Folder Include="Views\ViewModels\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Views\Soap\" />
+    <Folder Include="Views\Shampoo\" />
   </ItemGroup>
 </Project>
