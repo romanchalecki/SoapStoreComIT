@@ -1,23 +1,23 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{BC11FADF-6C38-4BE2-B9AA-EDC5F8BD2510}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoapStoreComIT/Views/SubCategory/SubCategoryList.cshtml">
     <Files>
-      <File FileName="SoapStoreComIT/Models/SubCategory.cs" Line="31" Column="43" />
-      <File FileName="SoapStoreComIT/Controllers/SubCategoryController.cs" />
-      <File FileName="SoapStoreComIT/Controllers/CategoryController.cs" />
-      <File FileName="SoapStoreComIT/Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="SoapStoreComIT/Controllers/SubCategoryController.cs" Line="37" Column="49" />
+      <File FileName="SoapStoreComIT/Controllers/CategoryController.cs" Line="1" Column="1" />
+      <File FileName="SoapStoreComIT/Views/SubCategory/CreateNewSubCategory.cshtml" Line="4" Column="37" />
+      <File FileName="SoapStoreComIT/Views/SubCategory/SubCategoryList.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SoapStoreComIT" expanded="True" selected="True">
+          <Node name="SoapStoreComIT" expanded="True">
             <Node name="SoapStoreComIT" expanded="True">
-              <Node name="Migrations" expanded="True">
-                <Node name="20200622153510_SubCategory.cs" expanded="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Shared" expanded="True" />
-                <Node name="SubCategory" expanded="True" />
+                <Node name="Category" expanded="True" />
+                <Node name="SubCategory" expanded="True">
+                  <Node name="SubCategoryList.cshtml" selected="True" />
+                </Node>
                 <Node name="ViewModels" expanded="True" />
               </Node>
             </Node>

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SoapStore.Models;
-using SoapStoreComIT.Migrations;
+using SoapStoreComIT.Models;
 using SoapStoreComIT.Views.ViewModels;
 
 namespace SoapStoreComIT.Controllers
@@ -31,6 +31,17 @@ namespace SoapStoreComIT.Controllers
             SubCategoryList results = new SubCategoryList();
             var SubCategories = await _db.SubCategory.Include(s=>s.Category).ToListAsync();
             results.SubCategories = SubCategories;
+            return View(results);
+        }
+
+        public async Task<IActionResult> CreateNewSubCategory() //create New SubCategory
+        {
+            SubCategoryList results = new SubCategoryList()
+            {
+                CategoryList = await _db.Category.ToListAsync(),
+                SubCategory = new Models.SubCategory(),
+                SubCategoryLists = await _db.SubCategory.OrderBy(p => p.Name).Select(p => p.Name).Distinct().ToListAsync()
+            };
             return View(results);
         }
     }

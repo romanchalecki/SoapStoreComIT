@@ -11,6 +11,8 @@ namespace SoapStore.Models
 
         }
 
+        public DbSet<Category> Category { get; set; }
+        public DbSet<SubCategory> SubCategory { get; set; }
         public DbSet<Soap> Soap { get; set; }
         public DbSet<Shampoo> Shampoo { get; set; }
 

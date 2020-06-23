@@ -9,8 +9,8 @@ using SoapStore.Models;
 namespace SoapStoreComIT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200618030215_Shampoo")]
-    partial class Shampoo
+    [Migration("20200622183623_Category")]
+    partial class Category
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -19,6 +19,22 @@ namespace SoapStoreComIT.Migrations
                 .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("SoapStoreComIT.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Category");
+                });
 
             modelBuilder.Entity("SoapStoreComIT.Models.Shampoo", b =>
                 {
@@ -84,6 +100,36 @@ namespace SoapStoreComIT.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Soap");
+                });
+
+            modelBuilder.Entity("SoapStoreComIT.Models.SubCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("SubCategory");
+                });
+
+            modelBuilder.Entity("SoapStoreComIT.Models.SubCategory", b =>
+                {
+                    b.HasOne("SoapStoreComIT.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

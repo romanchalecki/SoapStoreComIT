@@ -9,7 +9,7 @@ using SoapStore.Models;
 namespace SoapStoreComIT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200622153510_SubCategory")]
+    [Migration("20200622183705_SubCategory")]
     partial class SubCategory
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -112,26 +112,9 @@ namespace SoapStoreComIT.Migrations
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ingridients")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<long>("Quantity")
-                        .HasColumnType("bigint");
-
-                    b.Property<int>("Weight")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

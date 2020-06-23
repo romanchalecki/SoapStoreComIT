@@ -28,5 +28,7 @@
     <Folder Include="wwwroot\images\" />
     <Folder Include="Views\Soap\" />
     <Folder Include="Views\Shampoo\" />
+    <Folder Include="Views\SubCategory\" />
+    <Folder Include="Extensions\" />
   </ItemGroup>
 </Project>
