@@ -17,23 +17,32 @@
               <form method="post">
                   @if (@Model.SubCategories.Count() > 0)
                   {
-                      <table class="table-striped border">
+                      <table class="table table-striped border">
                           <tr class="table-secondary">
                               <td>
                                   <label asp-for="SubCategories.FirstOrDefault().Name"></label>
-                              </td>       
+                              </td>
+
+                              <td>
+                                  <label asp-for="SubCategories.FirstOrDefault().Category.Name"></label>
+                              </td>
                           </tr>
                           @foreach (var item in Model.SubCategories)
                           {
-                              <tr>
-                                  <td>
-                                      @Html.DisplayFor(m => item.Name)
-                                  </td>
-                                  <td>
-                                      <a asp-action="EditSubCategory" asp-route-id="@item.Id" class=" btn btn-primary btn-sm text-white">Edit</a>
-                                      <a asp-action="DeleteSubCategory" asp-route-Id="@item.Id" class="btn btn-danger btn-sm text-white">Delete</a>
-                                  </td>
-                              </tr>
+                      <tr>
+                          <td>
+                              @Html.DisplayFor(m => item.Name)
+                          </td>
+
+                          <td>
+                              @Html.DisplayFor(m => item.Category.Name)
+                          </td>
+
+                          <td>
+                              <a asp-action="EditSubCategory" asp-route-id="@item.Id" class=" btn btn-primary btn-sm text-white">Edit</a>
+                              <a asp-action="DeleteSubCategory" asp-route-Id="@item.Id" class="btn btn-danger btn-sm text-white">Delete</a>
+                          </td>
+                      </tr>
                           }
                       </table>
                   }

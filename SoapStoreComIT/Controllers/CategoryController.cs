@@ -72,7 +72,7 @@ namespace SoapStoreComIT.Controllers
             return View(_category);
         }
 
-        public async Task<IActionResult> SubmitEditCategory(Category category) //submit Edit Soap
+        public async Task<IActionResult> SubmitEditCategory(Category category) //submit Edit Category
         {
             if (ModelState.IsValid)
             {
