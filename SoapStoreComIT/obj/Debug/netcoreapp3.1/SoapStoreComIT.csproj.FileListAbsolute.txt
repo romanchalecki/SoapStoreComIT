@@ -847,11 +847,14 @@
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_StatusMessage.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Soap/CreateNewSoap.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Soap/DeleteSoap.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Soap/EditSoap.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Soap/SoapList.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/CreateNewSubCategory.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/EditSubCategory.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/SubCategoryList.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
@@ -865,6 +868,4 @@
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/SoapStoreComIT.pdb
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/SoapStoreComIT.genruntimeconfig.cache
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/SoapStoreComIT.csprojAssemblyReference.cache
-/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/CreateNewSubCategory.cshtml.g.cs
-/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_StatusMessage.cshtml.g.cs
-/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/EditSubCategory.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/StoreItemList.cshtml.g.cs

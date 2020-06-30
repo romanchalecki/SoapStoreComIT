@@ -1,0 +1,72 @@
+﻿@model IEnumerable<StoreItem>
+
+<br />
+<br />
+<div class="border backgroundWhite">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info">Store Item List</h2>
+        </div>
+        <div class="cool-6 text-right">
+            <a asp-controller="StoreItem" asp-action="CreateNewStoreItem" class="btn btn-info from-control text-white">Create New Item</a>
+        </div>
+    </div>
+    <br />
+
+
+    <div class="col-12 border p-3 mt-3">
+        <form method="post">
+            @if (@Model.Count() > 0)
+            {
+                <table class="table table-striped border">
+                    <tr class="table-secondary">
+                        <td>
+                            @Html.DisplayNameFor(m=>m.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.CategoryId)
+                        </td>
+                        <td>
+                            @Html.DisplayNameFor(m => m.SubCategoryId)
+                        </td>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.Category.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(m => item.SubCategory.Name)
+                    </td>
+                    <td>
+                        <a asp-action="EditCategory" asp-route-id="@item.Id" class=" btn btn-primary btn-sm text-white">Edit</a>
+                        <a asp-action="DeleteCategory" asp-route-Id="@item.Id" class="btn btn-danger btn-sm text-white">Delete</a>
+                    </td>
+                </tr>
+                    }
+                </table>
+            }
+            else
+            {
+                <p>There are no Store Items available.</p>
+            }
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+

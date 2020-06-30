@@ -30,5 +30,9 @@
     <Folder Include="Views\Shampoo\" />
     <Folder Include="Views\SubCategory\" />
     <Folder Include="Extensions\" />
+    <Folder Include="Views\StoreItem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Views\ViewModels\SubCategoryAndCategoryViewModel.cs" />
   </ItemGroup>
 </Project>

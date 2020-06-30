@@ -1,10 +1,8 @@
 ﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{BC11FADF-6C38-4BE2-B9AA-EDC5F8BD2510}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SoapStoreComIT/Controllers/SubCategoryController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SoapStoreComIT/Controllers/StoreItemController.cs">
     <Files>
-      <File FileName="SoapStoreComIT/Controllers/SubCategoryController.cs" Line="139" Column="1" />
-      <File FileName="SoapStoreComIT/Views/SubCategory/EditSubCategory.cshtml" Line="15" Column="55" />
-      <File FileName="SoapStoreComIT/Views/SubCategory/SubCategoryList.cshtml" Line="1" Column="1" />
-      <File FileName="SoapStoreComIT/Controllers/CategoryController.cs" Line="75" Column="102" />
+      <File FileName="SoapStoreComIT/Controllers/StoreItemController.cs" Line="34" Column="1" />
+      <File FileName="SoapStoreComIT/Views/SubCategory/SubCategoryList.cshtml" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -12,12 +10,10 @@
           <Node name="SoapStoreComIT" expanded="True">
             <Node name="SoapStoreComIT" expanded="True">
               <Node name="Controllers" expanded="True">
-                <Node name="SubCategoryController.cs" selected="True" />
+                <Node name="StoreItemController.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Category" expanded="True" />
-                <Node name="SubCategory" expanded="True" />
+                <Node name="StoreItem" expanded="True" />
                 <Node name="ViewModels" expanded="True" />
               </Node>
             </Node>

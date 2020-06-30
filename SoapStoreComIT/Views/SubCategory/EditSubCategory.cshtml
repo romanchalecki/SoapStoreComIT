@@ -45,14 +45,25 @@
         </form>
     </div>
 
+
+
+    @*DOESN'T DISPLAY CORRECTLY. DISPLAY LIKE A LINE*@
+
     <div class="col-3 offset-1">
         @if (Model.SubCategoryLists.Count() > 0)
         {
             <p> Existing SubCategories: </p>
 
-            <div id="SubCategoryLists">
-                <ul class="list-group"></ul>
-            </div>
+
+            <table class="table table-striped border">
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => Model.SubCategoryLists)
+                        </td>
+                    </tr>
+            </table>
+
+            
         }
     </div>
 
