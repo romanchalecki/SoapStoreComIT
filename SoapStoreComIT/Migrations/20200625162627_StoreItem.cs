@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SoapStoreComIT.Migrations
 {
@@ -54,6 +55,11 @@ namespace SoapStoreComIT.Migrations
         {
             migrationBuilder.DropTable(
                 name: "StoreItem");
+        }
+
+        public static implicit operator StoreItem(Models.StoreItem v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

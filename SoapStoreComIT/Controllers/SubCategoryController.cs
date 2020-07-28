@@ -135,6 +135,42 @@ namespace SoapStoreComIT.Controllers
         }
 
 
+        public async Task<IActionResult> DeleteSubCategory(int? id) //Delete SubCategory
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var subCategory = await _db.SubCategory.SingleOrDefaultAsync(m => m.Id == id);
+
+            if (subCategory == null)
+            {
+                return NotFound();
+            }
+
+            SubCategoryList results = new SubCategoryList()
+            {
+                CategoryList = await _db.Category.ToListAsync(),
+                SubCategory = subCategory,
+                SubCategoryLists = await _db.SubCategory.OrderBy(p => p.Name).Select(p => p.Name).Distinct().ToListAsync()
+            };
+            return View(results);
+        }
+
+        
+        public IActionResult SubmitDeleteSubCategory(SubCategory subCategory) //submit Delete SubCategory
+        {
+            var _subcategory = _db.SubCategory.Find(subCategory.Id);
+
+            if (_subcategory == null)
+            {
+                return NotFound();
+            }
+
+            _db.SubCategory.Remove(_subcategory);
+            _db.SaveChanges();
+            return Redirect(nameof(SubCategoryList));
+        }
 
 
     }

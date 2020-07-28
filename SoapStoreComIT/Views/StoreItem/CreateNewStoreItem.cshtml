@@ -1,0 +1,151 @@
+﻿@model SoapStoreComIT.Views.ViewModels.StoreItemViewModel
+@using SoapStoreComIT.Extensions
+
+<br />
+<h2 class="text-info">Create new Store Item</h2>
+<br />
+
+
+<div class="border backgroundWhite row">
+
+    <div class="col-8 border-right">
+        <form asp-action="CreateNewStoreItem" enctype="multipart/form-data">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Name" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="StoreItem.Name" class="form-control" />
+                </div>
+                <span asp-validation-for="StoreItem.Name" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Price" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="StoreItem.Price" class="form-control" />
+                </div>
+                <span asp-validation-for="StoreItem.Price" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Description" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    @Html.TextAreaFor(m => m.StoreItem.Description)
+                </div>
+                <span asp-validation-for="StoreItem.Description" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Weight" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="StoreItem.Weight" class="form-control" />
+                </div>
+                <span asp-validation-for="StoreItem.Weight" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Ingridients" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    @Html.TextAreaFor(m => m.StoreItem.Ingridients)
+                </div>
+                <span asp-validation-for="StoreItem.Ingridients" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Quantity" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="StoreItem.Quantity" class="form-control" />
+                </div>
+                <span asp-validation-for="StoreItem.Quantity" class="small text-danger"></span>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.Image" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="StoreItem.Image" type="file" name="files" accept="image/png, image/jpeg" multiple class="form-control" />
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.CategoryId" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <select onchange="test(this)" id="ddlCategorylist" asp-for="StoreItem.CategoryId" asp-items="Model.Category.ToSelectistItem(Model.StoreItem.CategoryId)" class="form-control"></select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-3">
+                    <label asp-for="StoreItem.SubCategoryId" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <select asp-for="@Model.StoreItem.SubCategoryId" name="SubCategoryId" id="SubCategoryId" asp-items="@(new SelectList(string.Empty,"Id","Name"))" class="form-control"></select>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-5 offset-3">
+                    <input type="submit" asp-action="AddNewStoreItem" value="Create" class="btn btn-primary form-control" />
+                </div>
+                <div class="col-3">
+                    <a asp-action="StoreItemList" class="btn btn-success form-control">Back to List</a>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script type="text/javascript">function test(a) {
+            var x = (a.value || a.options[a.selectedIndex].value);
+            if (x != null) {
+                $.ajax({
+                    type: "POST",
+                    url: "/SubCategory/GetSubCategory/" + x,
+                    data: null,
+                    success: function (result) {
+                        //alert(result);
+                        var items = '';
+                        $('#SubCategoryId').empty();
+                        $.each(result, function (i, subcategory) {
+                            items += "<option value='" + subcategory.value + "'>" + subcategory.text + "</option>";
+                        });
+                        $('#SubCategoryId').html(items);
+                    },
+                    error: function (req, status, error) {
+                        alert('error');
+                    }
+                });
+            }
+            //alert(x);
+        }
+        $(document).ready(function () {
+        });</script>
+
+
+
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}
+
+
+

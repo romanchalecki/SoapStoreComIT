@@ -869,3 +869,8 @@
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/SoapStoreComIT.genruntimeconfig.cache
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/SoapStoreComIT.csprojAssemblyReference.cache
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/StoreItemList.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/CreateNewStoreItem.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/SubCategory/DeleteSubCategory.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/EditStoreItem.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/DetailsStoreItem.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/DeleteStoreItem.cshtml.g.cs

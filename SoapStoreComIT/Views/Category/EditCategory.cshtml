@@ -15,7 +15,7 @@
                 <input asp-for="@Model.Name" class="form-control" />
             </div>
             <span asp-validation-for="@Model.Name" class="small text-danger"></span>
-            
+
         </div>
         <div class="form-group row">
             <div class="col-3 offset-4">
@@ -28,3 +28,8 @@
         </div>
     </form>
 </div>
+
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
