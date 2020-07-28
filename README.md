@@ -14,5 +14,4 @@ CRUD operations to Site Section for example product category, subcategory sectio
 CRUD operations to Section Elements for example create and block Associate profiles
 
 # User Functionality
-Make an orders, 
-Create accounts with address and contact information
+Make orders, Create accounts with address and contact information
