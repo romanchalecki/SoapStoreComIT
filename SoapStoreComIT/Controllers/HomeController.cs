@@ -26,7 +26,13 @@ namespace SoapStoreComIT.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            IndexViewModel IndexVM = new IndexViewModel()
+            {
+                StoreItem = _db.StoreItem.Include(m => m.Category).Include(m => m.SubCategory).ToList(),
+                Category = _db.Category.ToList()
+            };
+
+            return View(IndexVM);
         }
 
         public IActionResult Privacy()

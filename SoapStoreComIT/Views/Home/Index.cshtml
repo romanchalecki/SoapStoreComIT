@@ -1,8 +1,45 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model SoapStoreComIT.Views.ViewModels.IndexViewModel
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to Natural Soap Store</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="backgroundWhite container">
+
+    <ul id="menu-filters" class="menu-filter-list list-inline text-center">
+        <li class="filter active btn btn-secondary ml-1 mr-1" data-filter="show-all">Show All</li>
+        @foreach (var category in Model.Category)
+        {
+            <li class="ml-1 mr-1" data-filter="@category.Name.Replace(" ",string.Empty)">@category.Name</li>
+
+        }
+    </ul> 
+
+    @foreach(var category in Model.Category)
+    {
+        <div class="row" id="menu-wrapper">
+            <partial name="_StoreItemsAreaPartial" model="@Model.StoreItem.Where(c=>c.Category.Name.Equals(category.Name))" />
+        </div>
+    }
 </div>
+
+
+
+@section Scripts{
+
+<script>
+    var posts = $('.post');
+    (function ($) {
+        $("#menu-filters li").click(function () {
+            $("#menu-filters li").removeClass('active btn btn-secondary');
+            $(this).addClass('active btn btn-secondary');
+
+            var selectedFilter = $(this).data("filter");
+
+            $(".show-all").fadeOut();
+            $("." + selectedFilter).fadeIn();
+
+
+            setTimeout(function () {
+                $(selectedFilter).slideDown();
+            }, 300);
+        });
+    })(jQuery);
+</script>
+}

@@ -874,3 +874,4 @@
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/EditStoreItem.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/DetailsStoreItem.cshtml.g.cs
 /Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/StoreItem/DeleteStoreItem.cshtml.g.cs
+/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_StoreItemsAreaPartial.cshtml.g.cs

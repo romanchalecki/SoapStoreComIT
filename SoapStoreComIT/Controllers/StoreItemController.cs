@@ -78,12 +78,12 @@ namespace SoapStoreComIT.Controllers
                 }
                 storeItemFromDb.Image = @"\images\" + StoreItemVM.StoreItem.Id + extension;
             }
-            else
-            {
-                var uploads = Path.Combine(webRootPath, @"images/" + SD.DeafultItemImage);
-                System.IO.File.Copy(uploads, webRootPath + @"\images\" + StoreItemVM.StoreItem.Id + ".png");
-                storeItemFromDb.Image = @"\images\" + StoreItemVM.StoreItem.Id + ".png";
-            }
+            //else
+            //{
+            //    var uploads = Path.Combine(webRootPath, @"images/" + SD.DeafultItemImage);
+            //    System.IO.File.Copy(uploads, webRootPath + @"\images\" + StoreItemVM.StoreItem.Id + ".png");
+            //    storeItemFromDb.Image = @"\images\" + StoreItemVM.StoreItem.Id + ".png";
+            //}
 
             _db.SaveChanges();
 

@@ -37,8 +37,9 @@
                 <div class="col-4">
                     <label asp-for="StoreItem.Description" class="col-form-label"></label>
                 </div>
-                <div class="col-8" disabled>
-                    <input disabled asp-for="StoreItem.Description" class="form-control" />
+                <div class="col-8">
+                    @Html.TextAreaFor(m => m.StoreItem.Description, new { disabled = "disabled"})
+
                 </div>
             </div>
 
@@ -55,8 +56,8 @@
                 <div class="col-4">
                     <label asp-for="StoreItem.Ingridients" class="col-form-label"></label>
                 </div>
-                <div class="col-8" disabled>
-                    <input disabled asp-for="StoreItem.Ingridients" class="form-control" />
+                <div class="col-8">
+                    @Html.TextAreaFor(m => m.StoreItem.Ingridients, new { disabled = "disabled" })
                 </div>
             </div>
 
