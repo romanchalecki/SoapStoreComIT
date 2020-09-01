@@ -1,0 +1,188 @@
+﻿@model SoapStoreComIT.Views.ViewModels.OrderPaymentDetails
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <form method="post">
+        <br />
+        <input id="userId" asp-for="@Model.Order.Id" hidden />
+
+        <div class="backgroundWhiteBorder">
+            <div class="container">
+                <div class="cart">
+                    <div class="card-header bg-dark text-light ml-0 row-container">
+                        <div class="col-12">
+                            <i class="navbar"></i> &nbsp;
+                            Payment
+                            <div>
+                                <a class="col-10 text-right"></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="container rounded p-2">
+                            <div class="row">
+                                <div class="col-12 col-lg-6 pb-4">
+                                    <div class="row">
+                                        <h4 class="d-flex justify-content-between align-items-center md-3">
+                                            <span class="text-info">Credit card details:</span>
+                                        </h4>
+                                    </div>
+
+                                    <div class="row my-1">
+                                        <div class="col-3">
+                                            <label>Cardholder name</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input asp-for="@Model.CardholderName" id="txtName" type="text" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row my-1">
+                                        <div class="col-3">
+                                            <label>Creditcard number</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input asp-for="@Model.CreditcardNumber" id="txtCreditcardNumber" type="text" class="form-control" />
+                                        </div>
+                                    </div>
+
+                                    <div class="row my-1">
+                                        <div class="col-3">
+                                            <label>Expiration date</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input asp-for="@Model.ExpirationDate" id="txtExpirationDate" type="text" class="form-control" />
+
+                                        </div>
+                                    </div>
+
+                                    <div class="row my-1">
+                                        <div class="col-3">
+                                            <label>CVV</label>
+                                        </div>
+                                        <div class="col-9">
+                                            <input asp-for="@Model.CVV" id="txtCVV" type="text" class="form-control" />
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="col-12 col-lg-5 offset-lg-1">
+                                    <h4 class="d-flex justify-content-between align-items-center md-3">
+                                        <span class="text-info">Delivery details:</span>
+                                    </h4>
+                                    <ul class="list-group b-3">
+
+
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="my-0">Delivery Name</h6>
+                                            </div>
+                                            <span class="text-muted">@Model.Order.PickupName</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="my-0">Phone number</h6>
+                                            </div>
+                                            <span class="text-muted">@Model.Order.PhoneNumber</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="my-0">Delivery adress</h6>
+                                            </div>
+                                            <span class="text-muted">@(Model.Order.ApartmentNumber + ", " + Model.Order.StreetAdress)</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="my-0">City</h6>
+                                            </div>
+                                            <span class="text-muted">@(Model.Order.City + " " + Model.Order.PostalCode)</span>
+                                        </li>
+
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <div>
+                                                <h6 class="my-0">Country</h6>
+                                            </div>
+                                            <span class="text-muted">@(Model.Order.Province + " " + Model.Order.Country)</span>
+                                        </li>
+
+
+
+
+                                        <li class="list-group-item d-flex justify-content-between bg-light">
+                                            <div>
+                                                <h6 class="text-info">Order Total (CAD): </h6>
+                                            </div>
+                                            <span class="text-info">$@Model.Order.OrderTotal</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-12 col-md-4 offset-md-8">
+                                <button asp-action="PayNow" asp-area="" asp-controller="Cart" asp-route-id="@Model.Order.Id" type="submit" id="btnPayNow" onclick="return validateInput()" value="Pay Now" class="btn btn-success form-control">Pay Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+<script>function validateInput() {
+
+        var Name = document.getElementById("txtName").value;
+        var CreditcardNumber = document.getElementById("txtCreditcardNumber").value;
+        var ExpirationDate = document.getElementById("txtExpirationDate").value;
+        var CVV = document.getElementById("txtCVV").value;
+
+        if (Name.toString() == '')
+        {
+            alert("Please enter cardholder name");
+            return false;
+        } else
+        {
+            if (CreditcardNumber.toString() == '')
+            {
+                alert("Please enter creditcard number");
+                return false;
+            }
+            else
+            {
+                if (ExpirationDate.toString() == '')
+                {
+                    alert("Please enter expiration date");
+                    return false;
+                } else
+                {
+                    if (CVV.toString() == '') {
+                        alert("Please enter CVV code");
+                        return false;
+                    } else
+                    {
+                        return true;
+                    }             
+                }
+            }
+        }
+    }</script>
+

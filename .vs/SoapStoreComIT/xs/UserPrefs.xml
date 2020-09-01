@@ -1,32 +1,20 @@
-﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{BC11FADF-6C38-4BE2-B9AA-EDC5F8BD2510}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="SoapStoreComIT/Startup.cs">
-    <Files>
-      <File FileName="SoapStoreComIT/Views/StoreItem/DetailsStoreItem.cshtml" Line="61" Column="1" />
-      <File FileName="SoapStoreComIT/Areas/Identity/Pages/_ViewStart.cshtml" />
-      <File FileName="SoapStoreComIT/Views/Shared/_LoginPartial.cshtml" />
-      <File FileName="SoapStoreComIT/Startup.cs" Line="47" Column="17" />
-    </Files>
+﻿<Properties GitUserInfo="UsingMD" StartupConfiguration="{BC11FADF-6C38-4BE2-B9AA-EDC5F8BD2510}|SoapStoreComIT">
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="SoapStoreComIT" expanded="True">
-            <Node name="SoapStoreComIT" expanded="True">
-              <Node name="Views" expanded="True" />
-              <Node name="Startup.cs" selected="True" />
-            </Node>
+          <Node name="SoapStoreComIT" expanded="True" selected="True">
+            <Node name="SoapStoreComIT" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.SoapStoreComIT PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.ItemProperties.SoapStoreComIT PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/Views/Home/Index.cshtml" relfile="SoapStoreComIT/Views/Home/Index.cshtml" line="24" column="1" />
-      <Breakpoint file="/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/Views/Home/Index.cshtml" relfile="SoapStoreComIT/Views/Home/Index.cshtml" line="29" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>

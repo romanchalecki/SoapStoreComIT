@@ -104,7 +104,7 @@
 
             <div class="form-group row">
                 <div class="col-6">
-                    <input type="submit" asp-action="SaveEditStoreItem" model="StoreItem.Id" value="Submit" class="btn btn-primary form-control" />
+                    <input type="submit" asp-action="SaveEditStoreItem" asp-route-id="@Model.StoreItem.Id" model="StoreItem.Id" value="Submit" class="btn btn-primary form-control" />
                 </div>
                 <div class="col-6">
                     <a asp-action="StoreItemList" class="btn btn-success form-control">Back to List</a>

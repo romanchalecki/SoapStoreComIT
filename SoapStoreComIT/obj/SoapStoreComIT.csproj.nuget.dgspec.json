@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj": {}
+    "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj": {}
   },
   "projects": {
-    "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj": {
+    "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj",
+        "projectUniqueName": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj",
         "projectName": "SoapStoreComIT",
-        "projectPath": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj",
+        "projectPath": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT.csproj",
         "packagesPath": "/Users/Raman/.nuget/packages/",
-        "outputPath": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/obj/",
+        "outputPath": "/Users/Raman/Documents/GitHub/SoapStoreComIT/SoapStoreComIT/SoapStoreComIT/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/Raman/.config/NuGet/NuGet.Config"
@@ -60,6 +60,10 @@
               "target": "Package",
               "version": "[3.1.6, )"
             },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -89,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.302/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.401/RuntimeIdentifierGraph.json"
         }
       }
     }

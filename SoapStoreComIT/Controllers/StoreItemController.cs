@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using SoapStore.Models;
+using SoapStoreComIT.Data;
 using SoapStoreComIT.Utility;
 using SoapStoreComIT.Views.ViewModels;
 
@@ -15,6 +16,7 @@ using SoapStoreComIT.Views.ViewModels;
 
 namespace SoapStoreComIT.Controllers
 {
+    [Authorize(Roles = SD.ManagerUser)]
     public class StoreItemController : Controller
     {
         private readonly ApplicationDbContext _db;

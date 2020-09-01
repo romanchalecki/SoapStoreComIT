@@ -27,9 +27,18 @@
                                 <div class="col-8">
                                     <label class="text-right" style="font-size:20px; color:steelblue">@item.Name</label>
                                 </div>
-                                <div class="col-4 text-right" style="color:slateblue" >
-                                    <h4>CA$@item.Price</h4>
-                                </div>
+                                @if (item.Quantity > 0)
+                                {
+                                    <div class="col-4 text-right" style="color:slateblue">
+                                        <h4>CA$@item.Price</h4>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="col-4 text-right" style="color:red">
+                                        <h4>Sold Out</h4>
+                                    </div>
+                                }
                             </div>
 
                             <div class="row col-12 text-justify d-none d-md-block">
@@ -37,7 +46,7 @@
                             </div>
 
                             <div class="col-md-3 col-sm-12 offset-md-9 text-center">
-                                <a asp-action="MoreStoreItem" class="btn btn-success form-control" asp-route-id="@item.Id">More</a>
+                                <a asp-controller="Home" asp-action="MoreStoreItem" class="btn btn-success form-control" asp-route-id="@item.Id">More</a>
                             </div>
                         </div>
 
